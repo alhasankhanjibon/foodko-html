@@ -2361,9 +2361,94 @@ h1.post__title {
 }
 
 /*--icon box-end-*/
-.foodko-testimonial-section .testimonial-alig .foodko-testimonial-img {
+.foodko-testimonial-section .testimonial-align {
+  align-items: center;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img {
   position: relative;
 }
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img a img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img:hover .foodko-testimonial-img {
+  box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img:hover img {
+  transform: scale(1.1); /* Zoom out effect on hover */
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-img:hover a:before {
+  opacity: 1; /* Show overlay on hover */
+}
+@media (max-width: 1199px) {
+  .foodko-testimonial-section .testimonial-align .foodko-testimonial-content {
+    padding-top: 24px;
+  }
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-content p {
+  margin-bottom: 60px;
+}
+@media (max-width: 1399px) {
+  .foodko-testimonial-section .testimonial-align .foodko-testimonial-content p {
+    margin-bottom: 40px;
+  }
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box {
+    display: grid;
+  }
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box {
+  padding: 30px;
+  background: var(--background-color);
+  border-radius: 10px;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box p {
+  margin: 15px 0px 25px;
+  font-size: 18px;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box .foodko-testimonial-author-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box .foodko-testimonial-author-box .foodko-testimonial-author-text a {
+  color: var(--black-color1);
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box .foodko-testimonial-author-box .foodko-testimonial-author-text a p {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.foodko-testimonial-section .testimonial-align .foodko-testimonial-full-box .foodko-testimonial-box .foodko-testimonial-author-box .foodko-testimonial-author-text h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 /*---testimonial-section-2 slider start-*/
 .foodko-testimonial-slider {
   display: flex;
@@ -2532,6 +2617,9 @@ h1.post__title {
   fill: var(--accent-color);
 }
 
+.foodko-pricing-section {
+  background-color: var(--background-color);
+}
 .foodko-pricing-section .pricing-align .foodko-pricing-box {
   display: flex;
   gap: 34px;
@@ -2830,6 +2918,7 @@ h1.post__title {
 }
 
 /* foodko about-shape end*/
+/* pricing-shape start*/
 .foodko-pricing-shape {
   position: absolute;
   right: -233px;
@@ -2841,6 +2930,20 @@ h1.post__title {
   }
 }
 
+/* pricing-shape end*/
+/* foodko testimonial-shape start*/
+.foodko-testimonial-shape {
+  position: absolute;
+  left: -274px;
+  top: 0;
+}
+@media (max-width: 1399px) {
+  .foodko-testimonial-shape {
+    display: none;
+  }
+}
+
+/* foodko testimonial-shape end*/
 @media (max-width: 991px) {
   .foodko-center {
     text-align: center;
@@ -3118,6 +3221,10 @@ h1.post__title {
   align-items: center;
   position: relative;
   padding-bottom: 80px;
+}
+.foodko-subscription-wrap.border-bottom {
+  margin-bottom: 70px;
+  border-bottom: 1px solid #393D3D;
 }
 .foodko-subscription-wrap .foodko-footer-btn {
   display: inline-flex;
