@@ -12,203 +12,6 @@
   };
   $(function () {
     /*--------------------------------------------------------------
-    sofax PRELOADER JS INIT
-    --------------------------------------------------------------*/
-
-    $(".sofax-preloader-wrap").fadeOut(500);
-
-    /*--------------------------------------------------------------
-    sofax STICKY MENU JS INIT
-    --------------------------------------------------------------*/
-    $(window).on('scroll', function () {
-      if ($(window).scrollTop() > 50) {
-        $('#sticky-menu').addClass('sticky-menu');
-      } else {
-        $('#sticky-menu').removeClass('sticky-menu');
-      }
-    });
-    /*--------------------------------------------------------------
-    SOFAX BUTTON JS INIT
-    --------------------------------------------------------------*/
-
-    /*--------------------------------------------------------------
-    sofax COUNTER JS INIT
-    --------------------------------------------------------------*/
-    var sofax_counter = $('#sofax-counter');
-    if (sofax_counter.is_exist()) {
-      var a = 0;
-      $(window).scroll(function () {
-        var oTop = $(sofax_counter).offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.sofax-counter').each(function () {
-            var $this = $(this),
-              countTo = $this.attr('data-percentage');
-            $({
-              countNum: $this.text()
-            }).animate({
-              countNum: countTo
-            }, {
-              duration: 4000,
-              easing: 'swing',
-              step: function step() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function complete() {
-                $this.text(this.countNum);
-              }
-            });
-          });
-          a = 1;
-        }
-      });
-    }
-    $('.sofax-testimonial-slider').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 8000,
-      arrows: false,
-      pauseOnHover: false,
-      cssEase: 'linear',
-      responsive: [{
-        breakpoint: 1349,
-        settings: {
-          slidesToShow: 2
-        }
-      }, {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
-    });
-    $('.sofax-testimonial-slider-2').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 8000,
-      arrows: false,
-      pauseOnHover: false,
-      rtl: true,
-      cssEase: 'linear',
-      responsive: [{
-        breakpoint: 1349,
-        settings: {
-          slidesToShow: 2
-        }
-      }, {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
-    });
-
-    // sofax integration images slider 
-
-    $('.sofax-integration-slider-icon-data').slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 5000,
-      arrows: false,
-      pauseOnHover: false,
-      cssEase: 'linear',
-      responsive: [{
-        breakpoint: 1399,
-        settings: {
-          slidesToShow: 5
-        }
-      }, {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2
-        }
-      }]
-    });
-    $('.sofax-integration-slider-icon-data-wrap').slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 5000,
-      arrows: false,
-      pauseOnHover: false,
-      cssEase: 'linear',
-      rtl: true,
-      responsive: [{
-        breakpoint: 1399,
-        settings: {
-          slidesToShow: 5
-        }
-      }, {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2
-        }
-      }]
-    });
-
-    // testimonial 2column slider active
-
-    // $('.sofax-testimonial-2column-slider').slick({
-    //   slidesToShow:1,
-    //   slidesToScroll: 1,
-    //   autoplay: false,
-    //   arrows: true,
-    //   prevArrow: '<button class="slide-arrow sofax-t-next"></button>',
-    //   nextArrow: '<button class="slide-arrow sofax-t-prev"></button>',
-    // });
-
-    //  v5
-    $('.sofax-testimonial-2column-sliderv5').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: false,
-      arrows: true,
-      prevArrow: '<button class="slide-arrow sofax-t-next"></button>',
-      nextArrow: '<button class="slide-arrow sofax-t-prev"></button>'
-    });
-    // button animation
-
-    var buttons = document.querySelectorAll(".sofax-default-btn");
-    buttons.forEach(function (button) {
-      ["mouseenter", "mouseout"].forEach(function (evt) {
-        button.addEventListener(evt, function (e) {
-          var parentOffset = button.getBoundingClientRect(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-          var span = button.getElementsByTagName("span");
-          span[0].style.top = relY + "px";
-          span[0].style.left = relX + "px";
-        });
-      });
-    });
-
-    /*--------------------------------------------------------------
     sofax MAGNIFIC POPUP JS INIT
     ------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
@@ -234,61 +37,6 @@
     }
     // testimonial slider
 
-    $('.sofax-testimonial-2column-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      fade: false,
-      adaptiveHeight: true,
-      infinite: false,
-      useTransform: true,
-      speed: 400,
-      cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
-      prevArrow: '<button class="slide-arrow sofax-t-next"></button>',
-      nextArrow: '<button class="slide-arrow sofax-t-prev"></button>'
-    });
-    $('.sofax-testimonial-slider-nav').on('init', function (event, slick) {
-      $('.sofax-testimonial-slider-nav .slick-slide.slick-current').addClass('is-active');
-    }).slick({
-      slidesToShow: 7,
-      slidesToScroll: 7,
-      dots: false,
-      focusOnSelect: false,
-      infinite: false,
-      responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5
-        }
-      }, {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
-        }
-      }, {
-        breakpoint: 420,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      }]
-    });
-    $('.sofax-testimonial-2column-slider').on('afterChange', function (event, slick, currentSlide) {
-      $('.sofax-testimonial-slider-nav').slick('slickGoTo', currentSlide);
-      var currrentNavSlideElem = '.sofax-testimonial-slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-      $('.sofax-testimonial-slider-nav .slick-slide.is-active').removeClass('is-active');
-      $(currrentNavSlideElem).addClass('is-active');
-    });
-    $('.sofax-testimonial-slider-nav').on('click', '.slick-slide', function (event) {
-      event.preventDefault();
-      var goToSingleSlide = $(this).data('slick-index');
-      $('.sofax-testimonial-2column-slider').slick('slickGoTo', goToSingleSlide);
-    });
-    /*--------------------------------------------------------------
-    sofax PRICING TABLE JS INIT
-    ------------------------------------------------------------*/
     // Table BTN Trigger
     $("#l5-pricing-btn .toggle-btn").on("click", function (e) {
       console.log($(e.target).parent().parent().hasClass("monthly-active"));
@@ -556,3 +304,86 @@ if (foodko_counter.is_exist()) {
   });
 }
 /*--- COUNTER-SLIDER END---*/
+
+$('.testimonial-slider-1').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: false,
+  arrows: false,
+  responsive: [{
+    breakpoint: 1199,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
+});
+
+/*----arrow-top-- start-*/
+
+(function ($) {
+  "use strict";
+
+  /*------------------------------------------------------------------
+  [Table of contents]
+  
+  
+  -------------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  CUSTOM PRE DEFINE FUNCTION
+  ------------------------------------------------------------*/
+  /* is_exist() */
+  jQuery.fn.is_exist = function () {
+    return this.length;
+  };
+  $(function () {
+    /*--------------------------------------------------------------
+    STICKY MENU JS INIT
+    --------------------------------------------------------------*/
+
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function updateProgress() {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - scroll * pathLength / height;
+      progressPath.style.strokeDashoffset = progress;
+    };
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+        jQuery('.progress-wrap').removeClass('active-progress');
+      }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+      event.preventDefault();
+      jQuery('html, body').animate({
+        scrollTop: 0
+      }, duration);
+      return false;
+    });
+  }); /*End document ready*/
+
+  $(window).on("resize", function () {}); // end window resize
+
+  $(window).on("load", function () {}); // End window LODE
+})(jQuery);
+
+/*----arrow-top-- end-*/
