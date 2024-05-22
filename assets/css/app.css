@@ -2118,6 +2118,133 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   color: var(--heading-color) !important;
 }
 
+/*form-SECTION START*/
+.foodko-form-section {
+  background: var(--white-color);
+  padding: 50px;
+  border-radius: 10px;
+  gap: 24px;
+  display: grid;
+  margin-left: 26px;
+}
+.foodko-form-section.two {
+  background: none;
+  padding: 0;
+}
+.foodko-form-section.two .foodko-form-title h4 {
+  color: var(--white-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+.foodko-form-section.two .contact-page__input-box {
+  border: 1px solid var(--white-color2);
+}
+.foodko-form-section.two .contact-page__input-box input {
+  background-color: var(--heading-color);
+  color: var(--white-color);
+}
+.foodko-form-section.two .contact-page__input-box input::placeholder {
+  color: var(--heading-colo);
+}
+@media (max-width: 1199px) {
+  .foodko-form-section {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .foodko-form-section {
+    margin-left: 0px;
+    margin-top: 24px;
+  }
+}
+.foodko-form-section .contact-page__input-box {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--body-color);
+  border-radius: 3px;
+}
+.foodko-form-section .contact-page__input-box img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  width: 24px;
+  left: 17px;
+}
+.foodko-form-section .contact-page__input-box input {
+  width: 100%;
+  padding: 15px 40px 15px 49px;
+  border: none;
+  outline: none;
+}
+.foodko-form-section .contact-page__input-box input::placeholder {
+  color: var(--heading-colo);
+}
+.foodko-form-section button#foodko-form-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  border-radius: 3px;
+}
+
+/*form-SECTION end*/
+/*BOOKING-SECTION START*/
+.foodko-booking-section {
+  background-color: var(--background-color);
+}
+@media (max-width: 991px) {
+  .foodko-booking-section .foodko-booking-align {
+    text-align: center;
+  }
+}
+/*BOOKING-SECTION END*/
+/*CONTACT-SECTION START*/
+.foodko-contact-section {
+  background-color: var(--heading-color);
+}
+@media (max-width: 1199px) {
+  .foodko-contact-section .foodko-contact-content {
+    max-width: 610px;
+  }
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-text h2 {
+  color: var(--white-color);
+  font-family: "Playfair Display", serif;
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-text p {
+  color: var(--white-color2);
+  margin: 18px 0px 50px;
+}
+@media (max-width: 1199px) {
+  .foodko-contact-section .foodko-contact-content .foodko-contact-text p {
+    margin: 15px 0px 30px;
+  }
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 1199px) {
+  .foodko-contact-section .foodko-contact-content .foodko-contact-call {
+    margin-bottom: 40px;
+  }
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call .foodko-cotact-text p {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--white-color2);
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call .foodko-cotact-text h3 {
+  color: var(--white-color);
+}
+
+/*CONTACT-SECTION END*/
 @media (max-width: 1199px) {
   .foodko-subscription2 {
     padding-top: 24px;
@@ -2189,70 +2316,6 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   top: 2px;
 }
 
-/*BOOKING-SECTION START*/
-.foodko-booking-section {
-  background-color: var(--background-color);
-}
-@media (max-width: 991px) {
-  .foodko-booking-section .foodko-booking-align {
-    text-align: center;
-  }
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form {
-  background: var(--white-color);
-  padding: 50px;
-  border-radius: 10px;
-  gap: 24px;
-  display: grid;
-  margin-left: 26px;
-}
-@media (max-width: 1199px) {
-  .foodko-booking-section .foodko-booking-align .foodko-booking-form {
-    margin-left: 10px;
-  }
-}
-@media (max-width: 991px) {
-  .foodko-booking-section .foodko-booking-align .foodko-booking-form {
-    margin-left: 0px;
-    margin-top: 24px;
-  }
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form .contact-page__input-box {
-  position: relative;
-  width: 100%;
-  border: 1px solid rgba(57, 61, 61, 0.2);
-  border-radius: 3px;
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form .contact-page__input-box img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: auto;
-  width: 24px;
-  left: 17px;
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form .contact-page__input-box input {
-  width: 100%;
-  padding: 15px 40px 15px 49px;
-  border: none;
-  outline: none;
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form .contact-page__input-box input::placeholder {
-  color: var(--heading-colo);
-}
-.foodko-booking-section .foodko-booking-align .foodko-booking-form button#foodko-form-btn {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
-  border-radius: 3px;
-}
-
-/*BOOKING-SECTION END*/
 .sofax-breadcrumb {
   text-align: center;
   padding: 195px 0 130px;
@@ -2585,6 +2648,15 @@ h1.post__title {
   margin-bottom: 30px;
 }
 .foodko-icon-box.four:last-of-type {
+  margin-bottom: 0;
+}
+.foodko-icon-box.five {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.foodko-icon-box.five:last-of-type {
   margin-bottom: 0;
 }
 .foodko-icon-box .foodko-icon-img {
@@ -2971,6 +3043,143 @@ h1.post__title {
   margin-top: 24px;
 }
 
+/*PRICING-SECTION-02 START*/
+.foodko-pricing-section-2 .foodko-pricing-2-all {
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .foodko-pricing-section-2 .foodko-pricing-2-all {
+    margin-bottom: 40px;
+  }
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem {
+  display: block;
+  position: relative;
+  padding: 0;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dotted #000;
+  position: relative;
+  margin-top: -5px;
+  z-index: 1;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  background: transparent;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-description {
+  display: table-cell;
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-name {
+  display: inline;
+  margin: 0;
+  background: var(--background-color);
+  z-index: 2;
+  position: relative;
+  padding: 0 5px 0 0;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-options:before {
+  content: "";
+  display: inline-block;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-price {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: table-cell;
+  vertical-align: bottom;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-priceValue {
+  background-color: var(--background-color);
+  display: inline-block;
+  z-index: 2;
+  padding: 0 0 0 15px;
+  position: relative;
+  font-size: 24px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all p {
+  margin: 0;
+  padding: 15px 0px 35px;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all p:last-of-type {
+  padding: 15px 0px 0px;
+}
+
+.foodko-pricing-2-img-box {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  padding: 86px 42px;
+  position: relative;
+  margin-bottom: 23px;
+  background-size: cover;
+}
+.foodko-pricing-2-img-box:last-of-type {
+  margin-bottom: 0;
+}
+.foodko-pricing-2-img-box.foodko-pricing-2-img-box:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 15, 15, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content {
+  text-align: center;
+  position: relative;
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content h3 {
+  color: var(--white-color);
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content h5 {
+  color: var(--white-color2);
+  font-weight: 400;
+  padding: 10px 0px 15px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content h2 {
+  color: var(--background-color2);
+  font-size: 50px;
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn {
+  padding-top: 35px;
+  display: inline-flex;
+}
+.foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+  border-radius: 6px;
+  display: flex;
+  padding: 15px 69px;
+}
+@media (max-width: 1399px) {
+  .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+    padding: 15px 42px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+    padding: 15px 32px;
+  }
+}
+
+/*PRICING-SECTION-02 end*/
 /*===================*/
 /* hero-01 start
 /*===================*/
@@ -3224,6 +3433,17 @@ h1.post__title {
   }
 }
 
+.foodko-pricing-2-shape {
+  position: absolute;
+  top: 0;
+  left: -238px;
+}
+@media (max-width: 1399px) {
+  .foodko-pricing-2-shape {
+    display: none;
+  }
+}
+
 /* pricing-shape end*/
 /* foodko testimonial-shape start*/
 .foodko-testimonial-shape {
@@ -3400,6 +3620,91 @@ h1.post__title {
     -ms-transform: translate(1px, 22px);
   }
 }
+.foodko-portfolio-content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+.foodko-portfolio-content .foodko-portfolio-content-overlay {
+  background: rgba(10, 15, 15, 0.6);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+.foodko-portfolio-content .foodko-portfolio-content-overlay:hover {
+  opacity: 1;
+}
+.foodko-portfolio-content .foodko-portfolio-content-image {
+  width: 100%;
+}
+.foodko-portfolio-content .foodko-portfolio-content-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+.foodko-portfolio-content .foodko-portfolio-content-details:hover {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+.foodko-portfolio-content .foodko-portfolio-content-details h3 {
+  color: var(--white-color);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.foodko-portfolio-content .foodko-portfolio-content-details .text-star {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 5px;
+}
+.foodko-portfolio-content .foodko-portfolio-content-details .text-star p {
+  margin: 0;
+  color: var(--white-color);
+}
+.foodko-portfolio-content .foodko-portfolio-content-details .text-star img {
+  flex-shrink: 0;
+}
+
+.foodko-contact-section {
+  background-color: var(--heading-color);
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-text h2 {
+  color: var(--white-color);
+  font-family: "Playfair Display", serif;
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-text p {
+  color: var(--white-color2);
+  margin: 18px 0px 50px;
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call .foodko-cotact-text p {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--white-color2);
+}
+.foodko-contact-section .foodko-contact-content .foodko-contact-call .foodko-cotact-text h3 {
+  color: var(--white-color);
+}
+
 .foodko-about-center {
   position: relative;
   align-items: center;
@@ -3416,8 +3721,9 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-about-center .foodko-img-section {
-    padding-right: 0px;
+    padding-right: 0;
     padding-bottom: 24px;
+    text-align: center;
   }
 }
 .foodko-about-center .foodko-img-section a {
@@ -3764,6 +4070,13 @@ h1.post__title {
     text-align: center;
     margin: 0 auto;
     padding-left: 0px;
+  }
+}
+@media (max-width: 1199px) {
+  .foodko-site-title.left {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: left;
   }
 }
 .foodko-site-title .foodko-site-title-text1 h2 {
