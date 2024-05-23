@@ -2815,14 +2815,17 @@ h1.post__title {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.8);
   transition: all 0.4s ease-in-out;
 }
 
 .center-slider .slick-current.slick-active {
-  transform: scale(1.1);
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.1);
   background: var(--background-color);
   border-radius: 10px;
+}
+
+.center-slider .slick-track {
+  padding-top: 45px;
 }
 
 .center-slider ul.slick-dots {
@@ -2876,7 +2879,7 @@ h1.post__title {
   margin-top: 61px;
 }
 .foodko-testimonial-slider .foodko-testimonial-wrap .foodko-testimonial-slider-icon {
-  margin-top: -71px;
+  margin-top: -135px;
   justify-content: center;
   display: flex;
 }
