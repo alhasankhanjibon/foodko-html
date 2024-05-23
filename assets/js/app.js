@@ -234,45 +234,34 @@ $('.foodko-text-slider').slick({
   }]
 });
 
-/*--auto-slider-section--start*/
+/*-testimonial-slider-2 centermode--start*/
 
-$('.testimonial-slider').slick({
+$('.center-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  dots: true,
-  autoplay: false,
-  autoplaySpeed: 0,
+  centerMode: true,
   arrows: false,
-  infinite: false,
+  dots: true,
   speed: 300,
-  // centerMode: true,
+  centerPadding: '20px',
+  infinite: true,
+  autoplaySpeed: 5000,
+  autoplay: false,
   responsive: [{
-    breakpoint: 1399,
+    breakpoint: 1199,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 2
-    }
-  }, {
-    breakpoint: 991,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2
+      slidesToScroll: 1
     }
   }, {
     breakpoint: 767,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 3
+      slidesToScroll: 1
     }
   }]
 });
-$('.testimonial-slider .slick-dots li button').on('click', function () {
-  $('.foodko-testimonial-wrap').removeClass('active');
-  var index = $(this).parent().index();
-  $('.foodko-testimonial-wrap').eq(index).addClass('active');
-});
-
-/*--- testimonial-SLIDER END---*/
+/*-testimonial-slider-2 centermode--end*/
 
 /*--- COUNTER-SLIDER START---*/
 var foodko_counter = $('#foodko-counter');
