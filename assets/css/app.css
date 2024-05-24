@@ -311,6 +311,7 @@ h1,
   font-size: 110px;
   letter-spacing: -0.5px;
   line-height: 120px;
+  font-family: "Playfair Display", serif;
 }
 @media (max-width: 1400px) {
   h1,
@@ -343,6 +344,7 @@ h2,
   font-size: 60px;
   line-height: 66px;
   letter-spacing: -0.5px;
+  font-family: "Playfair Display", serif;
 }
 @media (max-width: 1199px) {
   h2,
@@ -2281,6 +2283,11 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   width: 100%;
   border-radius: 3px;
 }
+@media (max-width: 767px) {
+  .foodko-subscription2 form input {
+    padding: 15px 24px 15px 17px;
+  }
+}
 .foodko-subscription2 form input:focus {
   border: 1px solid #eaedf0 !important;
 }
@@ -2294,6 +2301,11 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   position: absolute;
   right: 5px;
   top: 5px;
+}
+@media (max-width: 767px) {
+  .foodko-subscription2 form .foodko-footer-btn {
+    position: static;
+  }
 }
 
 .sofax-breadcrumb {
@@ -3439,7 +3451,7 @@ h1.post__title {
     top: -61px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .foodko-feautrus-3-shape {
     display: none;
   }
@@ -3589,6 +3601,23 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-portfolio-shape {
+    display: none;
+  }
+}
+
+.foodko-portfolio-2-shape {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.foodko-portfolio-2-shape-1.up-down {
+  position: absolute;
+  top: 0;
+  right: -488px;
+}
+@media (max-width: 1399px) {
+  .foodko-portfolio-2-shape-1.up-down {
     display: none;
   }
 }
@@ -3800,88 +3829,63 @@ h1.post__title {
   padding: 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
   margin-top: 50px;
 }
-
+@media (max-width: 991px) {
+  .portfolio-menu {
+    display: ruby-text;
+  }
+}
 .portfolio-menu li {
-  border: 1px solid #635cdb;
-  margin: 0px 5px;
-  padding: 3px 15px;
+  border: 1px solid rgba(57, 61, 61, 0.2);
+  margin: 0px 10px;
+  padding: 14px 15px;
   text-transform: capitalize;
   cursor: pointer;
-  display: block;
-}
-
-.portfolio-menu li.active {
-  background-color: #635cdb;
-  color: #fff;
-}
-
-.single-portfolio {
-  position: relative;
-}
-
-.single-portfolio img {
-  width: 100%;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  color: #fff;
-  left: 0;
-  top: 0;
   display: flex;
+  font-weight: 700;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  z-index: 2;
-  transition: 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  transition: 1s;
-  flex-direction: column;
 }
-
-.portfolio-overlay::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: #333;
-  opacity: 0.7;
-  z-index: -1;
+@media (max-width: 991px) {
+  .portfolio-menu li:last-of-type {
+    margin-top: 24px;
+  }
 }
-
-.portfolio-overlay i {
-  border: 1px solid #fff;
-  padding: 12px 10px 10px 8px;
-  border-radius: 50%;
-  font-size: 16px;
+@media (max-width: 767px) {
+  .portfolio-menu li:nth-of-type(03) {
+    margin-top: 24px;
+  }
 }
-
-.portfolio-overlay h4 {
-  text-transform: capitalize;
-  margin-top: 15px;
-}
-
-.portfolio-overlay span {
-  display: block;
-  font-size: 15px;
-  margin-top: 5px;
-  font-weight: 400;
-}
-
-.single-portfolio:hover .portfolio-overlay {
-  opacity: 1;
-  visibility: visible;
+.portfolio-menu li.active {
+  background-color: var(--accent-color);
+  color: #fff;
 }
 
 /*--PORTFOLIO-SECTION ISOTOPE END--*/
+.foodko-portfolio-2-box {
+  text-align: center;
+  padding-bottom: 24px;
+}
+.foodko-portfolio-2-box .foodko-portfolio-2-img {
+  position: relative;
+}
+.foodko-portfolio-2-box .foodko-portfolio-2-img img {
+  width: 100%;
+  height: 100%;
+}
+.foodko-portfolio-2-box .foodko-portfolio-2-content {
+  background: var(--background-color);
+  border-radius: 0 0 10px 10px;
+  padding: 30px;
+}
+.foodko-portfolio-2-box .foodko-portfolio-2-content h4 {
+  font-family: "Playfair Display", serif;
+}
+.foodko-portfolio-2-box .foodko-portfolio-2-content p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
 /*--about-section start*/
 .foodko-about-center {
   position: relative;
@@ -4262,10 +4266,12 @@ h1.post__title {
 /*--site-title end*/
 .section {
   background-color: var(--background-color);
+  position: relative;
 }
 
 .section2 {
   background-color: var(--white-color);
+  position: relative;
 }
 
 .align-item-center {
