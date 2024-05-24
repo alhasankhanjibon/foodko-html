@@ -376,3 +376,22 @@ $('.testimonial-slider-1').slick({
 })(jQuery);
 
 /*----arrow-top-- end-*/
+
+/*--ISOTOP START --*/
+
+// init Isotope
+var $grid = $('.portfolio-items').isotope({
+  // options
+});
+// filter items on menu click
+$('.portfolio-menu').on('click', 'li', function () {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({
+    filter: filterValue
+  });
+});
+$('.portfolio-menu').on('click', 'li', function () {
+  $(this).addClass('active').siblings().removeClass('active');
+});
+
+/*--ISOTOP END --*/
