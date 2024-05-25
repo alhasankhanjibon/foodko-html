@@ -377,7 +377,7 @@ $('.testimonial-slider-1').slick({
 
 /*----arrow-top-- end-*/
 
-/*--ISOTOP START --*/
+/*--PORTFOLIO-SECTION --ISOTOP START --*/
 
 // init Isotope
 var $grid = $('.portfolio-items').isotope({
@@ -394,4 +394,4 @@ $('.portfolio-menu').on('click', 'li', function () {
   $(this).addClass('active').siblings().removeClass('active');
 });
 
-/*--ISOTOP END --*/
+/*-PORTFOLIO-SECTION --ISOTOP END --*/
