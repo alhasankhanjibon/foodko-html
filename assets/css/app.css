@@ -1969,6 +1969,9 @@ header.foodko-header-section.foodko-header3.sticky-menu {
 .foodko-footer-center .foodko-footer-menu ul li:first-of-type {
   padding-top: 0px;
 }
+.foodko-footer-center .foodko-footer-menu ul li.text-red a {
+  color: red;
+}
 .foodko-footer-center .foodko-footer-menu ul li a {
   font-size: 21px;
   color: var(--body-color);
@@ -2316,6 +2319,80 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   .foodko-subscription2 form .foodko-footer-btn {
     position: static;
   }
+}
+
+.foodko-breadcrumb {
+  text-align: center;
+  padding: 268px 0 130px;
+  background-color: var(--background-color);
+}
+@media (max-width: 991px) {
+  .foodko-breadcrumb {
+    padding: 170px 0 100px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-breadcrumb {
+    padding: 170px 0 80px;
+  }
+}
+@media (max-width: 575px) {
+  .foodko-breadcrumb {
+    padding: 130px 0 80px;
+  }
+}
+
+h1.post__title {
+  margin-bottom: 50px;
+  line-height: 110px;
+  font-size: 100px;
+  font-family: "Playfair Display", serif;
+}
+@media (max-width: 1400px) {
+  h1.post__title {
+    margin-bottom: 30px;
+  }
+}
+
+.breadcrumbs ul li {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 0;
+  padding: 0px 15px 0px 0px;
+  position: relative;
+  display: inline-block;
+  color: var(--accent-color);
+}
+@media (max-width: 767px) {
+  .breadcrumbs ul li {
+    font-size: 18px;
+  }
+}
+.breadcrumbs ul li:first-child {
+  padding-left: 0;
+}
+.breadcrumbs ul li:last-child {
+  padding-right: 0;
+}
+.breadcrumbs ul li:before {
+  content: "";
+  right: -8px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  background-size: 9px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon/arrow-right7.svg);
+}
+.breadcrumbs ul li:last-child:before {
+  content: none;
+}
+.breadcrumbs ul li a {
+  font-weight: 400;
 }
 
 .foodko-hero-section .foodko-center {
@@ -2897,53 +2974,62 @@ header.foodko-header-section.foodko-header3.sticky-menu {
 
 /*---testimonial-section-2 slider end-*/
 /*---testimonial-section-3  start-*/
-.foodko-testimonial-box {
-  display: flex;
+.foodko-testimonial-3-box {
+  display: flex !important;
   background: var(--background-color);
   padding: 54px;
   border-radius: 10px;
   align-items: center;
+  margin-right: 20px !important;
 }
 @media (max-width: 991px) {
-  .foodko-testimonial-box {
+  .foodko-testimonial-3-box {
     padding: 24px;
     display: inline-block;
     text-align: center;
   }
 }
-.foodko-testimonial-box .foodko-testimonial-img-box {
+.foodko-testimonial-3-box .foodko-testimonial-3-img-box {
   width: 100%;
   height: 100%;
 }
-.foodko-testimonial-box .foodko-testimonial-img-box img {
+.foodko-testimonial-3-box .foodko-testimonial-3-img-box img {
   object-fit: cover;
 }
-.foodko-testimonial-box .foodko-testimonial-3-content {
+.foodko-testimonial-3-box .foodko-testimonial-3-content {
   padding-left: 40px;
 }
 @media (max-width: 991px) {
-  .foodko-testimonial-box .foodko-testimonial-3-content {
+  .foodko-testimonial-3-box .foodko-testimonial-3-content {
     padding-left: 0;
   }
 }
-.foodko-testimonial-box .foodko-testimonial-3-content p {
+.foodko-testimonial-3-box .foodko-testimonial-3-content .foodko-testimonial-3-rating {
+  display: flex;
+  gap: 3px;
+}
+.foodko-testimonial-3-box .foodko-testimonial-3-content p {
   margin: 25px 0px;
 }
 @media (max-width: 991px) {
-  .foodko-testimonial-box .foodko-testimonial-3-content p {
+  .foodko-testimonial-3-box .foodko-testimonial-3-content p {
     margin: 10px 10px;
   }
 }
-.foodko-testimonial-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text a p {
+.foodko-testimonial-3-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text a p {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
   padding-bottom: 3px;
 }
-.foodko-testimonial-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text h6 {
+.foodko-testimonial-3-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text h6 {
   font-size: 18px;
   color: var(--body-color);
   font-weight: 400;
+}
+
+.foodko-slider-4 .slick-slide {
+  margin-right: 24px;
 }
 
 /*---testimonial-section-3  start-*/

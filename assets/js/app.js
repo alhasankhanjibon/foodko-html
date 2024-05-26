@@ -369,3 +369,29 @@ $('.portfolio-menu').on('click', 'li', function () {
 });
 
 /*-PORTFOLIO-SECTION --ISOTOP END --*/
+
+/*-testimonial-slider-3-start*/
+$('.foodko-slider-4').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 300,
+  speed: 300,
+  arrows: false,
+  dots: false,
+  responsive: [{
+    breakpoint: 1199,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
+});
+
+/*-testimonial-slider-3-end*/
