@@ -1915,6 +1915,9 @@ header.foodko-header-section {
   transition: all 0.4s;
   background-color: var(--background-color);
 }
+header.foodko-header-section.inner-header {
+  background-color: var(--white-color);
+}
 @media (max-width: 991px) {
   header.foodko-header-section {
     top: 0;
@@ -2393,6 +2396,11 @@ h1.post__title {
 }
 .breadcrumbs ul li a {
   font-weight: 400;
+  color: var(--heading-color);
+}
+.breadcrumbs ul li a:hover {
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
 .foodko-hero-section .foodko-center {
@@ -4754,6 +4762,4 @@ h1.post__title {
 .foodko-blog-wrap .foodko-blog-content a.foodko-blog-btn:hover path {
   fill: var(--accent-color);
 }
-
-/*1.4 themes css*/
 /*# sourceMappingURL=app.css.map */
