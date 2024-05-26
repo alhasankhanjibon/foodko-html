@@ -2318,79 +2318,6 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   }
 }
 
-.sofax-breadcrumb {
-  text-align: center;
-  padding: 195px 0 130px;
-  background-color: var(--dark-bg);
-}
-@media (max-width: 991px) {
-  .sofax-breadcrumb {
-    padding: 170px 0 100px;
-  }
-}
-@media (max-width: 767px) {
-  .sofax-breadcrumb {
-    padding: 170px 0 80px;
-  }
-}
-@media (max-width: 575px) {
-  .sofax-breadcrumb {
-    padding: 130px 0 80px;
-  }
-}
-
-h1.post__title {
-  margin-bottom: 50px;
-  color: white;
-}
-@media (max-width: 1400px) {
-  h1.post__title {
-    margin-bottom: 30px;
-  }
-}
-
-.breadcrumbs ul li {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
-  z-index: 0;
-  padding: 0 10px;
-  position: relative;
-  display: inline-block;
-  color: var(--accent-color);
-}
-@media (max-width: 767px) {
-  .breadcrumbs ul li {
-    font-size: 18px;
-  }
-}
-.breadcrumbs ul li:first-child {
-  padding-left: 0;
-}
-.breadcrumbs ul li:last-child {
-  padding-right: 0;
-}
-.breadcrumbs ul li:before {
-  content: "";
-  right: -8px;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  background-size: 9px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-image: url(../images/icon/arrow-right7.svg);
-}
-.breadcrumbs ul li:last-child:before {
-  content: none;
-}
-.breadcrumbs ul li a {
-  font-weight: 400;
-  color: #FDFDE1;
-}
-
 .foodko-hero-section .foodko-center {
   align-items: center;
   position: relative;
@@ -2968,6 +2895,58 @@ h1.post__title {
   padding-top: 3px;
 }
 
+/*---testimonial-section-2 slider end-*/
+/*---testimonial-section-3  start-*/
+.foodko-testimonial-box {
+  display: flex;
+  background: var(--background-color);
+  padding: 54px;
+  border-radius: 10px;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .foodko-testimonial-box {
+    padding: 24px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+.foodko-testimonial-box .foodko-testimonial-img-box {
+  width: 100%;
+  height: 100%;
+}
+.foodko-testimonial-box .foodko-testimonial-img-box img {
+  object-fit: cover;
+}
+.foodko-testimonial-box .foodko-testimonial-3-content {
+  padding-left: 40px;
+}
+@media (max-width: 991px) {
+  .foodko-testimonial-box .foodko-testimonial-3-content {
+    padding-left: 0;
+  }
+}
+.foodko-testimonial-box .foodko-testimonial-3-content p {
+  margin: 25px 0px;
+}
+@media (max-width: 991px) {
+  .foodko-testimonial-box .foodko-testimonial-3-content p {
+    margin: 10px 10px;
+  }
+}
+.foodko-testimonial-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text a p {
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+  padding-bottom: 3px;
+}
+.foodko-testimonial-box .foodko-testimonial-3-content .foodko-testimonial-3-author-box .foodko-testimonial-3-author-text h6 {
+  font-size: 18px;
+  color: var(--body-color);
+  font-weight: 400;
+}
+
+/*---testimonial-section-3  start-*/
 .foodko-cta-section {
   background-color: var(--background-color2);
 }
@@ -3531,12 +3510,6 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-feautrus-3-shape {
-    right: -174px;
-    top: -61px;
-  }
-}
-@media (max-width: 991px) {
-  .foodko-feautrus-3-shape {
     display: none;
   }
 }
@@ -3726,6 +3699,17 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-blog-shape {
+    display: none;
+  }
+}
+
+.foodko-blog-3-shape {
+  position: absolute;
+  right: -248px;
+  top: 49px;
+}
+@media (max-width: 1399px) {
+  .foodko-blog-3-shape {
     display: none;
   }
 }
@@ -4544,6 +4528,14 @@ h1.post__title {
     padding-left: 0px;
   }
 }
+.foodko-img-section.three {
+  padding-right: 0;
+}
+@media (max-width: 1199px) {
+  .foodko-img-section.three {
+    padding-bottom: 0px;
+  }
+}
 .foodko-img-section a {
   display: block;
   position: relative;
@@ -4587,16 +4579,30 @@ h1.post__title {
     padding-top: 24px;
   }
 }
-.foodko-blog-wrap a .foodko-blog-thumb {
-  overflow: hidden;
-  height: 100%;
+.foodko-blog-wrap.one {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
 }
-.foodko-blog-wrap a .foodko-blog-thumb:hover .foodko-blog-wrap .foodko-blog-thumb::before {
-  height: 100%;
-  opacity: 0;
-  transition: all 400ms linear;
+@media (max-width: 1199px) {
+  .foodko-blog-wrap.one {
+    margin-top: 24px;
+  }
 }
-.foodko-blog-wrap a .foodko-blog-thumb img {
+.foodko-blog-wrap.one .foodko-blog-content {
+  border: 0px;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .foodko-blog-wrap.one .foodko-blog-content {
+    text-align: center;
+  }
+}
+.foodko-blog-wrap.one .foodko-blog-content a h4 {
+  margin: 20px 0px 10px;
+  font-family: "Playfair Display", serif;
+}
+.foodko-blog-wrap a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4645,6 +4651,12 @@ h1.post__title {
   margin-top: 24px;
   gap: 8px;
 }
+@media (max-width: 767px) {
+  .foodko-blog-wrap .foodko-blog-content a.foodko-blog-btn {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}
 .foodko-blog-wrap .foodko-blog-content a.foodko-blog-btn path {
   fill: var(--heading-color);
   transition: fill 0.4s;
@@ -4655,11 +4667,6 @@ h1.post__title {
 }
 .foodko-blog-wrap .foodko-blog-content a.foodko-blog-btn:hover path {
   fill: var(--accent-color);
-}
-@media (max-width: 767px) {
-  .foodko-blog-wrap .foodko-blog-content a.foodko-blog-btn {
-    margin-top: 15px;
-  }
 }
 
 /*1.4 themes css*/

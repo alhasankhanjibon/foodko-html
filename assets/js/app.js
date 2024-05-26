@@ -11,32 +11,6 @@
     return this.length;
   };
   $(function () {
-    /*--------------------------------------------------------------
-    sofax MAGNIFIC POPUP JS INIT
-    ------------------------------------------------------------*/
-    var popup_youtube = $('.video-init');
-    if (popup_youtube.is_exist()) {
-      popup_youtube.magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade'
-      });
-    }
-    var popup_youtube = $('.play-video');
-    if (popup_youtube.is_exist()) {
-      popup_youtube.magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade'
-      });
-    }
-    var popup_youtube = $('.aboutus-video');
-    if (popup_youtube.is_exist()) {
-      popup_youtube.magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade'
-      });
-    }
-    // testimonial slider
-
     // Table BTN Trigger
     $("#l5-pricing-btn .toggle-btn").on("click", function (e) {
       console.log($(e.target).parent().parent().hasClass("monthly-active"));
