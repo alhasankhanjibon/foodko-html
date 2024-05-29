@@ -1876,12 +1876,12 @@ blockquote {
 
 /*1.1 layout css*/
 .foodko-top-header {
-  position: fixed;
   z-index: 10;
   width: 100%;
-  padding: 15px 0px 15px;
+  padding: 15px 0 15px;
   transition: all 0.4s;
   background-color: var(--background-color2);
+  position: fixed;
 }
 @media (max-width: 991px) {
   .foodko-top-header {
@@ -1954,6 +1954,15 @@ header.foodko-header-section.foodko-header3 {
 
 header.foodko-header-section.foodko-header3.sticky-menu {
   background-color: var(--dark-bg);
+}
+
+.foodko-top-header.sticky-menu {
+  margin-top: -70px;
+  opacity: 0;
+}
+
+.sticky-menu + .foodko-header-section {
+  top: 0;
 }
 
 .foodko-footer-center {
@@ -2231,16 +2240,6 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   transition: all 0.4s;
   border-radius: 3px;
 }
-@media (max-width: 767px) {
-  .foodko-form-section button#foodko-form-btn {
-    position: static;
-    top: 50%;
-    transform: translateY(0%);
-    height: auto;
-    right: 5px;
-    margin-top: 20px;
-  }
-}
 
 /*form-SECTION end*/
 /*BOOKING-SECTION START*/
@@ -2353,11 +2352,23 @@ header.foodko-header-section.foodko-header3.sticky-menu {
     padding-top: 24px;
   }
 }
+@media (max-width: 767px) {
+  .foodko-subscription2 {
+    padding-top: 24px;
+    max-width: 335px;
+    margin: 0 auto;
+  }
+}
 .foodko-subscription2.one {
   max-width: 508px;
 }
 .foodko-subscription2 h3 {
   padding-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .foodko-subscription2 h3 {
+    padding-bottom: 10px;
+  }
 }
 .foodko-subscription2 form {
   position: relative;
@@ -2484,6 +2495,9 @@ h1.post__title {
   font-weight: 700;
 }
 
+.foodko-hero-section {
+  background-color: var(--background-color);
+}
 .foodko-hero-section .foodko-center {
   align-items: center;
   position: relative;
@@ -3229,11 +3243,18 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-auto-text-slider-section .swiper-wrapper .swiper-slide .foodko-auto-slider-item h2 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 991px) {
+  .foodko-auto-text-slider-section .swiper-wrapper .swiper-slide .foodko-auto-slider-item h2 {
+    font-size: 41px;
+    line-height: 60px;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
   .foodko-auto-text-slider-section .swiper-wrapper .swiper-slide .foodko-auto-slider-item h2 {
     font-size: 27px;
     gap: 20px;
@@ -4388,7 +4409,7 @@ h1.post__title {
 }
 @media (max-width: 767px) {
   .foodko-section-padding2 {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 
@@ -4473,21 +4494,41 @@ h1.post__title {
 }
 @media (max-width: 991px) {
   .foodko-section-padding8 {
-    padding: 20px 0px 70px;
+    padding: 0px 0px 70px;
   }
 }
 @media (max-width: 767px) {
   .foodko-section-padding8 {
-    padding: 10px 0px 50px;
+    padding: 0px 0px 50px;
   }
 }
 
 .foodko-section-padding9 {
   padding: 130px 0px 80px;
 }
+@media (max-width: 991px) {
+  .foodko-section-padding9 {
+    padding: 100px 0px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-section-padding9 {
+    padding: 50px 0px 20px;
+  }
+}
 
 .foodko-section-padding10 {
   padding: 0px 0px 130px;
+}
+@media (max-width: 991px) {
+  .foodko-section-padding10 {
+    padding: 0px 0px 80px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-section-padding10 {
+    padding: 0px 0px 50px;
+  }
 }
 
 .foodko-section-title {
@@ -4496,6 +4537,11 @@ h1.post__title {
   text-align: center;
   margin: 0 auto;
   position: relative;
+}
+@media (max-width: 991px) {
+  .foodko-section-title {
+    padding-bottom: 40px;
+  }
 }
 @media (max-width: 767px) {
   .foodko-section-title {
@@ -4508,7 +4554,7 @@ h1.post__title {
 .foodko-section-title.center {
   margin: 0 auto;
   text-align: center;
-  max-width: 1072px;
+  max-width: 1021px;
   position: relative;
 }
 @media (max-width: 1199px) {
@@ -4519,7 +4565,6 @@ h1.post__title {
 .foodko-section-title.center h1 {
   font-size: 100px;
   line-height: 110px;
-  color: var(--white-color);
 }
 @media (max-width: 1199px) {
   .foodko-section-title.center h1 {
@@ -4537,6 +4582,9 @@ h1.post__title {
     font-size: 40px;
     line-height: 50px;
   }
+}
+.foodko-section-title.light h1 {
+  color: var(--white-color);
 }
 .foodko-section-title.cta-title {
   max-width: 746px;
@@ -4578,7 +4626,7 @@ h1.post__title {
     padding-right: 0;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .foodko-section-title1 {
     text-align: center;
   }
@@ -4702,9 +4750,8 @@ h1.post__title {
 }
 @media (max-width: 1199px) {
   .foodko-site-title.left {
-    max-width: 620px;
-    margin: 0 auto;
-    text-align: left;
+    max-width: 934px;
+    text-align: start;
   }
 }
 .foodko-site-title.one {
@@ -4844,6 +4891,10 @@ h1.post__title {
 .foodko-img-section {
   padding-right: 26px;
   position: relative;
+}
+.foodko-img-section img {
+  width: 100%;
+  height: 100%;
 }
 .foodko-img-section.two {
   display: block;
