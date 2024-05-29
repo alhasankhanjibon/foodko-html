@@ -395,3 +395,29 @@ $('.foodko-slider-4').slick({
 });
 
 /*-testimonial-slider-3-end*/
+
+// Get the input fields and the calendar icon
+var dateInputField = document.getElementById('datepicker');
+var timeInputField = document.getElementById('timepicker');
+
+// Function to set current date and time when the input fields are clicked
+dateInputField.addEventListener('click', function () {
+  this.type = 'date';
+  this.focus();
+});
+timeInputField.addEventListener('click', function () {
+  this.type = 'time';
+  this.focus();
+});
+
+// If the user manually enters a date or time, change the input type to text
+dateInputField.addEventListener('change', function () {
+  if (this.value !== '') {
+    this.type = 'text';
+  }
+});
+timeInputField.addEventListener('change', function () {
+  if (this.value !== '') {
+    this.type = 'text';
+  }
+});

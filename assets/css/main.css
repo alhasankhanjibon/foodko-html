@@ -12,10 +12,10 @@
 .brand-logo,
 .default-logo,
 .responsive-logo {
-  max-width: 128px;
+  /* max-width: 128px; */
   transition: all 0.4s;
   position: relative;
-  margin-right: 35px;
+  /* margin-right: 35px; */
 }
 
 @media (min-width: 576px) {
