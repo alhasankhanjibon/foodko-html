@@ -31,6 +31,20 @@
     });
     /* top sticky-menu end*/
 
+    /* skillbar start*/
+    $(document).ready(function () {
+      startAnimation();
+      function startAnimation() {
+        jQuery('.skillbar').each(function () {
+          jQuery(this).find('.skillbar-bar').animate({
+            width: jQuery(this).attr('data-percent')
+          }, 6000);
+        });
+      }
+    });
+
+    /* skillbar end*/
+
     /*--auto-slider-section--start*/
 
     $('.foodko-text-slider').slick({
