@@ -723,6 +723,20 @@ blockquote {
   font-family: "Playfair Display", serif;
   background-color: var(--background-color);
 }
+@media (max-width: 1199px) {
+  blockquote {
+    font-size: 24px;
+    padding: 20px;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 767px) {
+  blockquote {
+    font-size: 24px;
+    padding: 15px;
+    margin: 15px 0px;
+  }
+}
 
 .border-transparent {
   border-color: transparent !important;
@@ -2083,6 +2097,9 @@ header.foodko-header-section.foodko-header3.sticky-menu {
 .foodko-default-btn.btn-2:hover {
   border: 1px solid var(--background-color2);
 }
+.foodko-default-btn.inner-blog-details-btn {
+  margin-top: 50px;
+}
 .foodko-default-btn.pill {
   border-radius: 3px;
   padding: 15px 34px;
@@ -2259,7 +2276,7 @@ header.foodko-header-section.foodko-header3.sticky-menu {
   outline: none;
 }
 .foodko-form-section .contact-page__input-box input::placeholder {
-  color: var(--heading-colo);
+  color: var(--heading-color);
 }
 .foodko-form-section button#foodko-form-btn {
   width: 100%;
@@ -4399,6 +4416,9 @@ h1.post__title {
 .foodko-portfolio-box {
   display: block;
 }
+.foodko-portfolio-box.gallery {
+  padding-bottom: 24px;
+}
 @media (max-width: 1199px) {
   .foodko-portfolio-box {
     display: ruby-text;
@@ -5730,10 +5750,26 @@ h1.post__title {
   border-top: 1px solid rgba(57, 61, 61, 0.2);
   border-bottom: 1px solid rgba(57, 61, 61, 0.2);
 }
+@media (max-width: 1199px) {
+  .foodko-blog-tag-wrapper {
+    display: block;
+  }
+}
 .foodko-blog-tag-wrapper .foodko-blog-tag-wrap {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+@media (max-width: 1199px) {
+  .foodko-blog-tag-wrapper .foodko-blog-tag-wrap {
+    gap: 10px;
+    padding-right: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-blog-tag-wrapper .foodko-blog-tag-wrap {
+    padding-bottom: 20px;
+  }
 }
 .foodko-blog-tag-wrapper .foodko-blog-tag-wrap h3 {
   font-family: "Playfair Display", serif;
@@ -5741,6 +5777,11 @@ h1.post__title {
 .foodko-blog-tag-wrapper .foodko-blog-tag-wrap ul {
   display: flex;
   gap: 24px;
+}
+@media (max-width: 1199px) {
+  .foodko-blog-tag-wrapper .foodko-blog-tag-wrap ul {
+    gap: 10px;
+  }
 }
 .foodko-blog-tag-wrapper .foodko-blog-tag-wrap ul li {
   background: rgba(57, 61, 61, 0.15);
@@ -5810,7 +5851,12 @@ h1.post__title {
   display: block;
 }
 .foodko-post-comment ul li.children {
-  padding-left: 85px;
+  padding-left: 95px;
+}
+@media (max-width: 767px) {
+  .foodko-post-comment ul li.children {
+    padding-left: 0px;
+  }
 }
 .foodko-post-comment ul li.children .foodko-post-comment-wrap.children2 {
   border-top: 1px solid rgba(57, 61, 61, 0.2);
@@ -5818,6 +5864,53 @@ h1.post__title {
   border-bottom: 1px solid rgba(57, 61, 61, 0.2);
   padding-bottom: 30px;
 }
+.foodko-comment-box h3 {
+  margin-bottom: 25px;
+  font-family: "Playfair Display", serif;
+}
+.foodko-comment-box .foodko-comment-box-form {
+  border: 1px solid rgba(57, 61, 61, 0.2);
+  padding: 30px;
+  background: var(--background-color);
+  border-radius: 10px;
+}
+.foodko-comment-box .foodko-comment-box-form .foodko-comment-form {
+  border-bottom: 1px solid #e7e7e8 !important;
+  padding-bottom: 50px;
+}
+.foodko-comment-box .foodko-comment-box-form .foodko-comment-form input {
+  margin: 0;
+  width: 100%;
+  height: 52px;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 18px;
+  border-radius: 0;
+  background-color: transparent;
+  border: none !important;
+  transition: all 0.4s;
+}
+.foodko-comment-box .foodko-comment-box-form .foodko-comment-form input::placeholder {
+  color: var(--heading-color);
+}
+.foodko-comment-box .foodko-comment-box-form .foodko-comment-form textarea {
+  height: 130px;
+  resize: none;
+  margin: 0;
+  width: 100%;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 18px;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 24px 0 0px !important;
+  border: none !important;
+  transition: all 0.4s;
+}
+.foodko-comment-box .foodko-comment-box-form .foodko-comment-form textarea::placeholder {
+  color: var(--heading-color);
+}
+
 /*--BLOG-DETAILS-INNER-SECTION END-*/
 .contact-inner {
   gap: 36px;
