@@ -31,6 +31,22 @@
     });
     /* top sticky-menu end*/
 
+    /* ACCORDION START*/
+    $(document).ready(function () {
+      $('.foodko-accordion-header').on('click', function () {
+        var $accordionItem = $(this).closest('.foodko-accordion-item');
+        var $accordionBody = $accordionItem.find('.foodko-accordion-body');
+
+        // Close all other accordion items
+        $('.foodko-accordion-item').not($accordionItem).removeClass('open').find('.foodko-accordion-body').slideUp();
+
+        // Toggle the clicked accordion item
+        $accordionBody.slideToggle();
+        $accordionItem.toggleClass('open');
+      });
+    });
+    /* ACCORDION END*/
+
     /* skillbar start*/
     $(document).ready(function () {
       startAnimation();
