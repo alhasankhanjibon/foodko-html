@@ -1,45 +1,84 @@
 (function($) {
 "use strict";
+/* Countdown Clock START*/
 
-// Specify the deadline date
-const deadlineDate = new Date('Decembar 31, 2023 23:59:59').getTime();
+var daysSpan = document.getElementById('days');
+var hoursSpan = document.getElementById('hours');
+var minutesSpan = document.getElementById('minutes');
+var secondsSpan = document.getElementById('seconds');
 
-// Cache all countdown boxes into consts
-const countdownDays = document.querySelector('.countdown-days .number');
-const countdownHours= document.querySelector('.countdown-hours .number');
-const countdownMinutes= document.querySelector('.countdown-minutes .number');
-const countdownSeconds= document.querySelector('.countdown-seconds .number');
+var initialDays = 29;
+var initialHours = 7;
+var initialMinutes = 29;
+var initialSeconds = 39;
 
-// Update the count down every 1 second (1000 milliseconds)
-setInterval(() => {    
-  // Get current date and time
-  const currentDate = new Date().getTime();
+daysSpan.innerText = addLeadingZeros(initialDays);
+hoursSpan.innerText = addLeadingZeros(initialHours);
+minutesSpan.innerText = addLeadingZeros(initialMinutes);
+secondsSpan.innerText = addLeadingZeros(initialSeconds);
 
-  // Calculate the distance between current date and time and the deadline date and time
-  const distance = deadlineDate - currentDate;
 
-  // Calculations the data for remaining days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+var deadline = addRemainingTime(new Date(), initialDays, initialHours, initialMinutes, initialSeconds).getTime();
 
-  // Insert the result data into individual countdown boxes
-  if(countdownDays) {
-    countdownDays.innerHTML = days;
-  }
-  if(countdownHours) {
-    countdownHours.innerHTML = hours;
-  }
-  if(countdownMinutes) {
-    countdownMinutes.innerHTML = minutes;
-  }
-  if(countdownSeconds) {
-    countdownSeconds.innerHTML = seconds;
+updateClock(deadline);
+var interval = setInterval(updateClock, 1000);
+
+function addRemainingTime(startDate, days, hours, minutes, seconds) {
+  return new Date(
+    startDate.getFullYear(),
+    startDate.getMonth(),
+    startDate.getDate() + days,
+    startDate.getHours() + hours,
+    startDate.getMinutes() + minutes,
+    startDate.getSeconds() + seconds
+  );
+}
+
+function getRemainingTime(deadline) {
+  var total = deadline - new Date().getTime();
+  
+  if (isNaN(total)) {
+    return false;
   }
   
+  var seconds = Math.floor((total / 1000) % 60);
+  var minutes = Math.floor((total / 1000 / 60) % 60);
+  var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(total / (1000 * 60 * 60 * 24));
   
-}, 1000);
+  return {
+    'total': total,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function updateClock() {
+  var remainingTime = getRemainingTime(deadline);
+  
+  if (remainingTime.total <= 0) {
+    clearInterval(interval);
+    
+    document.getElementById('expired').classList.add('show');
+    
+    return false;
+  } else if (!remainingTime) {
+    return false;
+  }
+  
+  daysSpan.innerText = addLeadingZeros(remainingTime.days);
+  hoursSpan.innerText = addLeadingZeros(remainingTime.hours);
+  minutesSpan.innerText = addLeadingZeros(remainingTime.minutes);
+  secondsSpan.innerText = addLeadingZeros(remainingTime.seconds);
+}
+
+function addLeadingZeros(time) {
+  return ('0' + time).slice(-2);
+}
+
+/* Countdown Clock end*/
 
 
 })(jQuery);
