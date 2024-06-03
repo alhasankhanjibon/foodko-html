@@ -2413,7 +2413,13 @@ button#foodko-inner-blog-btn {
   text-align: center;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: inline-block;
+  width: 554px;
+}
+@media (max-width: 767px) {
+  .foodko-subscription2.coming-son-btn {
+    width: 100%;
+  }
 }
 .foodko-subscription2.coming-son-btn input[type=email] {
   background: transparent;
@@ -2437,12 +2443,6 @@ button#foodko-inner-blog-btn {
 }
 .foodko-subscription2 form {
   position: relative;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .foodko-subscription2 form {
-    width: 334px;
-  }
 }
 .foodko-subscription2 form.max {
   width: 100%;
