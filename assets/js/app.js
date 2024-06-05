@@ -378,11 +378,12 @@ function getRemainingTime(deadline) {
 }
 function updateClock() {
   var remainingTime = getRemainingTime(deadline);
-  if (remainingTime.total <= 0) {
+  if (!remainingTime || remainingTime.total <= 0) {
     clearInterval(interval);
+    if (!remainingTime) {
+      return false;
+    }
     document.getElementById('expired').classList.add('show');
-    return false;
-  } else if (!remainingTime) {
     return false;
   }
   daysSpan.innerText = addLeadingZeros(remainingTime.days);
@@ -393,6 +394,7 @@ function updateClock() {
 function addLeadingZeros(time) {
   return ('0' + time).slice(-2);
 }
+
 /*--------------------------------------------------------------
 COUNTDOWN CLOCK SECTION JS INIT
 --------------------------------------------------------------*/

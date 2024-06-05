@@ -3596,6 +3596,7 @@ h1.post__title {
   display: flex;
   gap: 8px;
   justify-content: end;
+  align-items: center;
 }
 .foodko-social-icon.team-social {
   display: block;
@@ -3784,6 +3785,10 @@ h1.post__title {
   display: block;
   position: relative;
   padding: 0;
+  padding-bottom: 35px;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem:last-of-type {
+  padding-bottom: 0;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table {
   position: relative;
@@ -3795,9 +3800,7 @@ h1.post__title {
   font-size: 18px;
   margin-bottom: 35px;
   line-height: 28px;
-}
-.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table p:last-child {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-description {
   display: table-cell;
@@ -3815,6 +3818,7 @@ h1.post__title {
   position: relative;
   margin-top: -10px;
   z-index: 1;
+  width: 100%;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-name {
   display: inline;
