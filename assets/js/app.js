@@ -1,14 +1,21 @@
 "use strict";
 
-/*----arrow-top-- start-*/
-
 (function ($) {
   "use strict";
 
   /*------------------------------------------------------------------
   [Table of contents]
   
-  
+  1.TOP STICKY-MENU SECTION JS INIT
+  2.ACCORDION SECTION JS INIT
+  3.SKILLBAR SECTION JS INIT
+  4.TEXT SLIDER  SECTION JS INIT
+  5.CENTER SLIDER  SECTION JS INIT
+  6.COUNTER SLIDER SECTION JS INIT
+  7. TESTIMONIAL SLIDER 1 SECTION JS INIT
+  8.PORTFOLIO-SECTION ISOTOP JS INIT
+  9.TESTIMONIAL SLIDER 3 SECTION JS INIT
+  10.DATE AND TIMEPICKER SECTION JS INIT
   
   -------------------------------------------------------------------*/
 
@@ -19,9 +26,46 @@
   jQuery.fn.is_exist = function () {
     return this.length;
   };
-
-  /* top sticky-menu start*/
   $(function () {
+    /*--------------------------------------------------------------
+    STICKY MENU JS INIT
+    --------------------------------------------------------------*/
+
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function updateProgress() {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - scroll * pathLength / height;
+      progressPath.style.strokeDashoffset = progress;
+    };
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+        jQuery('.progress-wrap').removeClass('active-progress');
+      }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+      event.preventDefault();
+      jQuery('html, body').animate({
+        scrollTop: 0
+      }, duration);
+      return false;
+    });
+
+    /*--------------------------------------------------------------
+    TOP STICKY-MENU SECTION JS INIT
+    --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
         $('#sticky-menu').addClass('sticky-menu');
@@ -29,9 +73,14 @@
         $('#sticky-menu').removeClass('sticky-menu');
       }
     });
-    /* top sticky-menu end*/
 
-    /* ACCORDION START*/
+    /*--------------------------------------------------------------
+     TOP STICKY-MENU SECTION JS INIT
+      --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+     ACCORDION SECTION JS INIT
+      --------------------------------------------------------------*/
     $(document).ready(function () {
       $('.foodko-accordion-header').on('click', function () {
         var $accordionItem = $(this).closest('.foodko-accordion-item');
@@ -45,88 +94,13 @@
         $accordionItem.toggleClass('open');
       });
     });
-    /* ACCORDION END*/
+    /*--------------------------------------------------------------
+     ACCORDION SECTION JS INIT
+      --------------------------------------------------------------*/
 
-    /* Countdown Clock START*/
-
-    // var daysSpan = document.getElementById('days');
-    // var hoursSpan = document.getElementById('hours');
-    // var minutesSpan = document.getElementById('minutes');
-    // var secondsSpan = document.getElementById('seconds');
-
-    // var initialDays = 29;
-    // var initialHours = 7;
-    // var initialMinutes = 29;
-    // var initialSeconds = 39;
-
-    // daysSpan.innerText = addLeadingZeros(initialDays);
-    // hoursSpan.innerText = addLeadingZeros(initialHours);
-    // minutesSpan.innerText = addLeadingZeros(initialMinutes);
-    // secondsSpan.innerText = addLeadingZeros(initialSeconds);
-
-    // var deadline = addRemainingTime(new Date(), initialDays, initialHours, initialMinutes, initialSeconds).getTime();
-
-    // updateClock(deadline);
-    // var interval = setInterval(updateClock, 1000);
-
-    // function addRemainingTime(startDate, days, hours, minutes, seconds) {
-    //   return new Date(
-    //     startDate.getFullYear(),
-    //     startDate.getMonth(),
-    //     startDate.getDate() + days,
-    //     startDate.getHours() + hours,
-    //     startDate.getMinutes() + minutes,
-    //     startDate.getSeconds() + seconds
-    //   );
-    // }
-
-    // function getRemainingTime(deadline) {
-    //   var total = deadline - new Date().getTime();
-
-    //   if (isNaN(total)) {
-    //     return false;
-    //   }
-
-    //   var seconds = Math.floor((total / 1000) % 60);
-    //   var minutes = Math.floor((total / 1000 / 60) % 60);
-    //   var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-    //   var days = Math.floor(total / (1000 * 60 * 60 * 24));
-
-    //   return {
-    //     'total': total,
-    //     'days': days,
-    //     'hours': hours,
-    //     'minutes': minutes,
-    //     'seconds': seconds
-    //   };
-    // }
-
-    // function updateClock() {
-    //   var remainingTime = getRemainingTime(deadline);
-
-    //   if (remainingTime.total <= 0) {
-    //     clearInterval(interval);
-
-    //     document.getElementById('expired').classList.add('show');
-
-    //     return false;
-    //   } else if (!remainingTime) {
-    //     return false;
-    //   }
-
-    //   daysSpan.innerText = addLeadingZeros(remainingTime.days);
-    //   hoursSpan.innerText = addLeadingZeros(remainingTime.hours);
-    //   minutesSpan.innerText = addLeadingZeros(remainingTime.minutes);
-    //   secondsSpan.innerText = addLeadingZeros(remainingTime.seconds);
-    // }
-
-    // function addLeadingZeros(time) {
-    //   return ('0' + time).slice(-2);
-    // }
-
-    /* Countdown Clock end*/
-
-    /* skillbar start*/
+    /*--------------------------------------------------------------
+      SKILLBAR SECTION JS INIT
+      --------------------------------------------------------------*/
     $(document).ready(function () {
       startAnimation();
       function startAnimation() {
@@ -138,10 +112,13 @@
       }
     });
 
-    /* skillbar end*/
+    /*--------------------------------------------------------------
+    SKILLBAR SECTION JS INIT
+    --------------------------------------------------------------*/
 
-    /*--auto-slider-section--start*/
-
+    /*--------------------------------------------------------------
+    TEXT SLIDER  SECTION JS INIT
+    --------------------------------------------------------------*/
     $('.foodko-text-slider').slick({
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -165,9 +142,13 @@
         }
       }]
     });
+    /*--------------------------------------------------------------
+    TEXT SLIDER  SECTION JS INIT
+    --------------------------------------------------------------*/
 
-    /*-testimonial-slider-2 centermode--start*/
-
+    /*--------------------------------------------------------------
+     CENTER SLIDER  SECTION JS INIT
+      --------------------------------------------------------------*/
     $('.center-slider').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -193,9 +174,14 @@
         }
       }]
     });
-    /*-testimonial-slider-2 centermode--end*/
 
-    /*--- COUNTER-SLIDER START---*/
+    /*--------------------------------------------------------------
+      CENTER SLIDER SECTION JS INIT
+      --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+     COUNTER SLIDER SECTION JS INIT
+     --------------------------------------------------------------*/
     var foodko_counter = $('#foodko-counter');
     if (foodko_counter.is_exist()) {
       var a = 0;
@@ -224,8 +210,14 @@
         }
       });
     }
-    /*--- COUNTER-SLIDER END---*/
 
+    /*--------------------------------------------------------------
+     COUNTER SLIDER SECTION JS INIT
+     --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+      TESTIMONIAL SLIDER 1 SECTION JS INIT
+      --------------------------------------------------------------*/
     $('.testimonial-slider-1').slick({
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -246,11 +238,12 @@
       }]
     });
     /*--------------------------------------------------------------
-    STICKY MENU JS INIT
+    TESTIMONIAL SLIDER 1 SECTION JS INIT
     --------------------------------------------------------------*/
 
-    /*--PORTFOLIO-SECTION --ISOTOP START --*/
-
+    /*--------------------------------------------------------------
+    PORTFOLIO-SECTION ISOTOP JS INIT
+    --------------------------------------------------------------*/
     // init Isotope
     var $grid = $('.portfolio-items').isotope({
       // options
@@ -266,9 +259,14 @@
       $(this).addClass('active').siblings().removeClass('active');
     });
 
-    /*-PORTFOLIO-SECTION --ISOTOP END --*/
+    /*--------------------------------------------------------------
+    PORTFOLIO-SECTION ISOTOP JS INIT
+    --------------------------------------------------------------*/
 
-    /*-testimonial-slider-3-start*/
+    /*--------------------------------------------------------------
+    TESTIMONIAL SLIDER 3 SECTION JS INIT
+    --------------------------------------------------------------*/
+
     $('.foodko-slider-4').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -292,7 +290,13 @@
       }]
     });
 
-    /*-testimonial-slider-3-end*/
+    /*--------------------------------------------------------------
+    TESTIMONIAL SLIDER 3 SECTION JS INIT
+    --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+    DATE AND TIMEPICKER SECTION JS INIT
+    --------------------------------------------------------------*/
 
     // Get the input fields and the calendar icon
     var dateInputField = document.getElementById('datepicker');
@@ -319,6 +323,10 @@
         this.type = 'text';
       }
     });
+
+    /*--------------------------------------------------------------
+      DATE AND TIMEPICKER SECTION JS INIT
+      --------------------------------------------------------------*/
   }); /*End document ready*/
 
   $(window).on("resize", function () {}); // end window resize
@@ -328,13 +336,14 @@
   //foodko wow js
   var wow = new WOW({
     mobile: false,
-    // default
     tablet: false
   });
   wow.init();
 })(jQuery);
 
-/* Countdown Clock START*/
+/*--------------------------------------------------------------
+COUNTDOWN CLOCK SECTION JS INIT
+--------------------------------------------------------------*/
 
 var daysSpan = document.getElementById('days');
 var hoursSpan = document.getElementById('hours');
@@ -344,10 +353,6 @@ var initialDays = 29;
 var initialHours = 7;
 var initialMinutes = 29;
 var initialSeconds = 39;
-daysSpan.innerText = addLeadingZeros(initialDays);
-hoursSpan.innerText = addLeadingZeros(initialHours);
-minutesSpan.innerText = addLeadingZeros(initialMinutes);
-secondsSpan.innerText = addLeadingZeros(initialSeconds);
 var deadline = addRemainingTime(new Date(), initialDays, initialHours, initialMinutes, initialSeconds).getTime();
 updateClock(deadline);
 var interval = setInterval(updateClock, 1000);
@@ -388,7 +393,6 @@ function updateClock() {
 function addLeadingZeros(time) {
   return ('0' + time).slice(-2);
 }
-
-/* Countdown Clock end*/
-
-/*----arrow-top-- end-*/
+/*--------------------------------------------------------------
+COUNTDOWN CLOCK SECTION JS INIT
+--------------------------------------------------------------*/

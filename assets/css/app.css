@@ -2001,9 +2001,6 @@ header.foodko-header-section.foodko-header3.sticky-menu {
     padding-top: 20px;
   }
 }
-.foodko-footer-center .foodko-footer-menu h4 {
-  font-family: "Playfair Display", serif;
-}
 .foodko-footer-center .foodko-footer-menu ul {
   padding-top: 30px;
 }
@@ -2043,6 +2040,11 @@ header.foodko-header-section.foodko-header3.sticky-menu {
 }
 .foodko-footer-center .foodko-footer-menu ul li.foodko-time p.font-weight {
   font-weight: 400;
+}
+.foodko-footer-center .foodko-footer-menu ul li.foodko-adress {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
 }
 
 .foodko-footer-bottom.center {
@@ -2281,7 +2283,7 @@ header.foodko-header-section.foodko-header3.sticky-menu {
 .foodko-form-section .contact-page__input-box input::placeholder {
   color: var(--heading-color);
 }
-.foodko-form-section button#foodko-form-btn {
+.foodko-form-section button.foodko-form-btn {
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -2785,8 +2787,35 @@ h1.post__title {
     display: ruby;
   }
 }
-.foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 h1 {
+.foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 .font-size {
+  font-size: 110px;
+  margin-bottom: 15px;
+  line-height: 120px;
+  font-weight: 700;
   font-family: "Playfair Display", serif;
+}
+@media (max-width: 1399px) {
+  .foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 .font-size {
+    font-size: 93px;
+  }
+}
+@media (max-width: 1199px) {
+  .foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 .font-size {
+    font-size: 90px;
+    line-height: 100px;
+  }
+}
+@media (max-width: 991px) {
+  .foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 .font-size {
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 .font-size {
+    font-size: 40px;
+    line-height: 55px;
+  }
 }
 .foodko-counter-all .foodko-counter-single-box .foodko-counter-data2 p {
   padding-top: 15px;
@@ -3501,7 +3530,7 @@ h1.post__title {
     padding: 15px 27px 15px 27px;
   }
 }
-.foodko-cta-section .foodko-hero-btn1 button#foodko-form-btn {
+.foodko-cta-section .foodko-hero-btn1 button.foodko-form-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -3509,7 +3538,7 @@ h1.post__title {
   right: 5px;
 }
 @media (max-width: 767px) {
-  .foodko-cta-section .foodko-hero-btn1 button#foodko-form-btn {
+  .foodko-cta-section .foodko-hero-btn1 button.foodko-form-btn {
     width: 100%;
     position: static;
     top: 50%;
@@ -3563,6 +3592,17 @@ h1.post__title {
   }
 }
 
+.foodko-social-icon {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+.foodko-social-icon.team-social {
+  display: block;
+}
+.foodko-social-icon.footer-social {
+  display: block;
+}
 .foodko-social-icon.inner-blog-details h3 {
   font-family: "Playfair Display", serif;
   margin-right: 14px;
@@ -3745,19 +3785,19 @@ h1.post__title {
   position: relative;
   padding: 0;
 }
-.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem:after {
-  content: "";
-  display: block;
-  border-bottom: 1px dotted #000;
-  position: relative;
-  margin-top: -5px;
-  z-index: 1;
-}
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table {
   position: relative;
   display: table;
   border-collapse: separate;
   background: transparent;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  line-height: 28px;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-table p:last-child {
+  margin-bottom: 0 !important;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-description {
   display: table-cell;
@@ -3765,8 +3805,16 @@ h1.post__title {
   z-index: 2;
   float: left;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 23px;
   vertical-align: bottom;
+}
+.foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-description:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dotted #000;
+  position: relative;
+  margin-top: -10px;
+  z-index: 1;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-name {
   display: inline;
@@ -3775,6 +3823,9 @@ h1.post__title {
   z-index: 2;
   position: relative;
   padding: 0 5px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-options:before {
   content: "";
@@ -3785,7 +3836,7 @@ h1.post__title {
   white-space: nowrap;
   vertical-align: middle;
   display: table-cell;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 .foodko-pricing-section-2 .foodko-pricing-2-all .MenuItem-priceValue {
   background-color: var(--background-color);
@@ -3796,13 +3847,6 @@ h1.post__title {
   font-size: 24px;
   color: var(--accent-color);
   font-weight: 700;
-}
-.foodko-pricing-section-2 .foodko-pricing-2-all p {
-  margin: 0;
-  padding: 15px 0px 35px;
-}
-.foodko-pricing-section-2 .foodko-pricing-2-all p:last-of-type {
-  padding: 15px 0px 0px;
 }
 
 @media (max-width: 1199px) {
@@ -3836,8 +3880,9 @@ h1.post__title {
 .foodko-pricing-2-right-site .foodko-pricing-2-img-box {
   border-radius: 10px;
   background-repeat: no-repeat;
-  padding: 86px 44px;
+  padding: 86px 45px 85px 45px;
   position: relative;
+  background-position: center center;
   margin-bottom: 23px;
   background-size: cover;
 }
@@ -3904,18 +3949,18 @@ h1.post__title {
   padding-top: 35px;
   display: inline-flex;
 }
-.foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+.foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn .foodko-pricing-btn {
   border-radius: 6px;
   display: flex;
   padding: 15px 116px;
 }
 @media (max-width: 1399px) {
-  .foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+  .foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn .foodko-pricing-btn {
     padding: 15px 42px;
   }
 }
 @media (max-width: 767px) {
-  .foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn button#foodko-pricing-btn {
+  .foodko-pricing-2-right-site .foodko-pricing-2-img-box .foodko-pricing-2-content .foodko-pricing-2-btn .foodko-pricing-btn {
     padding: 15px 32px;
   }
 }
@@ -5340,6 +5385,13 @@ h1.post__title {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 1199px) {
+  .foodko-img-section {
+    padding-right: 0;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+}
 .foodko-img-section.two {
   display: block;
   position: relative;
@@ -5350,7 +5402,8 @@ h1.post__title {
 }
 .foodko-img-section.two img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 .foodko-img-section.two:before {
   content: "";
@@ -5369,13 +5422,6 @@ h1.post__title {
 }
 .foodko-img-section.two:hover:before {
   opacity: 1; /* Show overlay on hover */
-}
-@media (max-width: 1199px) {
-  .foodko-img-section {
-    padding-right: 0;
-    padding-bottom: 24px;
-    text-align: center;
-  }
 }
 .foodko-img-section.one {
   padding-left: 30px;
@@ -5741,7 +5787,6 @@ h1.post__title {
 }
 .foodko-blog-sidebar .foodko-blog-widgets .foodko-search-box #foodko-search-btn {
   position: absolute;
-  /* left: 0; */
   top: 15px;
   right: 48px;
 }
