@@ -289,47 +289,7 @@
         }
       }]
     });
-
-    /*--------------------------------------------------------------
-    TESTIMONIAL SLIDER 3 SECTION JS INIT
-    --------------------------------------------------------------*/
-
-    /*--------------------------------------------------------------
-    DATE AND TIMEPICKER SECTION JS INIT
-    --------------------------------------------------------------*/
-
-    // Get the input fields and the calendar icon
-    var dateInputField = document.getElementById('datepicker');
-    var timeInputField = document.getElementById('timepicker');
-
-    // Function to set current date and time when the input fields are clicked
-    dateInputField.addEventListener('click', function () {
-      this.type = 'date';
-      this.focus();
-    });
-    timeInputField.addEventListener('click', function () {
-      this.type = 'time';
-      this.focus();
-    });
-
-    // If the user manually enters a date or time, change the input type to text
-    dateInputField.addEventListener('change', function () {
-      if (this.value !== '') {
-        this.type = 'text';
-      }
-    });
-    timeInputField.addEventListener('change', function () {
-      if (this.value !== '') {
-        this.type = 'text';
-      }
-    });
-
-    /*--------------------------------------------------------------
-      DATE AND TIMEPICKER SECTION JS INIT
-      --------------------------------------------------------------*/
   }); /*End document ready*/
-
-  $(window).on("resize", function () {}); // end window resize
 
   $(window).on("load", function () {}); // End window LODE
 
@@ -340,61 +300,3 @@
   });
   wow.init();
 })(jQuery);
-
-/*--------------------------------------------------------------
-COUNTDOWN CLOCK SECTION JS INIT
---------------------------------------------------------------*/
-
-var daysSpan = document.getElementById('days');
-var hoursSpan = document.getElementById('hours');
-var minutesSpan = document.getElementById('minutes');
-var secondsSpan = document.getElementById('seconds');
-var initialDays = 29;
-var initialHours = 7;
-var initialMinutes = 29;
-var initialSeconds = 39;
-var deadline = addRemainingTime(new Date(), initialDays, initialHours, initialMinutes, initialSeconds).getTime();
-updateClock(deadline);
-var interval = setInterval(updateClock, 1000);
-function addRemainingTime(startDate, days, hours, minutes, seconds) {
-  return new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + days, startDate.getHours() + hours, startDate.getMinutes() + minutes, startDate.getSeconds() + seconds);
-}
-function getRemainingTime(deadline) {
-  var total = deadline - new Date().getTime();
-  if (isNaN(total)) {
-    return false;
-  }
-  var seconds = Math.floor(total / 1000 % 60);
-  var minutes = Math.floor(total / 1000 / 60 % 60);
-  var hours = Math.floor(total / (1000 * 60 * 60) % 24);
-  var days = Math.floor(total / (1000 * 60 * 60 * 24));
-  return {
-    'total': total,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-function updateClock() {
-  var remainingTime = getRemainingTime(deadline);
-  if (!remainingTime || remainingTime.total <= 0) {
-    clearInterval(interval);
-    if (!remainingTime) {
-      return false;
-    }
-    document.getElementById('expired').classList.add('show');
-    return false;
-  }
-  daysSpan.innerText = addLeadingZeros(remainingTime.days);
-  hoursSpan.innerText = addLeadingZeros(remainingTime.hours);
-  minutesSpan.innerText = addLeadingZeros(remainingTime.minutes);
-  secondsSpan.innerText = addLeadingZeros(remainingTime.seconds);
-}
-function addLeadingZeros(time) {
-  return ('0' + time).slice(-2);
-}
-
-/*--------------------------------------------------------------
-COUNTDOWN CLOCK SECTION JS INIT
---------------------------------------------------------------*/
